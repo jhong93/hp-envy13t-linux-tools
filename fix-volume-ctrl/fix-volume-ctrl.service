@@ -1,0 +1,15 @@
+[Unit]
+Description=Fix volume control HP Envy 13t
+After=suspend.target
+After=hibernate.target
+After=hybrid-sleep.target
+
+[Service]
+ExecStart=/usr/bin/fix-volume-ctrl -t 5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=suspend.target
+WantedBy=hibernate.target
+WantedBy=hybrid-sleep.target

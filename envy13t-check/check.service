@@ -1,0 +1,8 @@
+[Unit]
+Description=Check services on HP Envy 13t
+
+[Service]
+ExecStart=/usr/bin/envy13t-check
+
+[Install]
+WantedBy=default.target
